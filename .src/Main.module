@@ -1,0 +1,41 @@
+' Gambas module file
+
+Public Sub Main()
+
+  Dim a As String[]
+  Dim $titlekeyfile As String = User.home &/ ".switch/title.keys"
+  Dim t As Date
+  Dim s As String
+  Dim aa As String[]
+  Dim titlekey As String
+
+  Print "Fix Dobble Titlekeys"
+  t = Now
+  aa = New String[]
+  If Args.Count > 1 Then
+    $titlekeyfile = Args[2]
+  Endif
+
+  a = Split(File.Load($titlekeyfile), gb.NewLine)
+  For Each s In a
+    If aa.Find(s) = -1 Then
+      aa.Add(s)
+    Endif
+  Next
+
+  For Each s In aa
+
+    titlekey &= s & gb.NewLine
+
+  Next
+
+  File.Save($titlekeyfile, titlekey)
+  Print "Done in: " & DateDiff(Now, t, gb.Second) & " Seconds"
+
+Catch
+  Print "Error"
+  Print Error.Text
+  Print Error.code
+  Print Error.Where
+
+End
