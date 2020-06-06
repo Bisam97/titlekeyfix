@@ -20,6 +20,12 @@ Public Sub Main()
   For Each s In a
     If aa.Find(s) = -1 Then
       aa.Add(s)
+    Else
+      If s = gb.NewLine Then
+      Else
+        Print "Found Dobble Key " & s
+      Endif
+
     Endif
   Next
 
