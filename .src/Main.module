@@ -13,7 +13,7 @@ Public Sub Main()
   t = Now
   aa = New String[]
   If Args.Count > 1 Then
-    $titlekeyfile = Args[2]
+    $titlekeyfile = Args[1]
   Endif
 
   a = Split(File.Load($titlekeyfile), gb.NewLine)

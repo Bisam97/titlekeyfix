@@ -1,8 +1,9 @@
 # Gambas Project File 3.0
 Title=titlekeyfix
 Startup=Main
-Profiling=1
 Version=0.0.1
+Arguments=[["/mnt/e/title.keys"]]
+CurrentArgument=1
 TabSize=2
 Language=en_US
 Maintainer=bisam97
