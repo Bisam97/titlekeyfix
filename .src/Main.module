@@ -16,7 +16,11 @@ Public Sub Main()
     $titlekeyfile = Args[1]
   Endif
 
-  a = Split(File.Load($titlekeyfile), gb.NewLine)
+  a = Split(File.Load($titlekeyfile), gb.NewLine, Null, True)
+  If a[0] = "This_File_is_Fixed" Then
+    Print "The title key file has already been checked \nCancel"
+    Quit
+  Endif
   For Each s In a
     If aa.Find(s) = -1 Then
       aa.Add(s)
@@ -28,7 +32,7 @@ Public Sub Main()
 
     Endif
   Next
-
+  titlekey = "This_File_is_Fixed" & gb.NewLine
   For Each s In aa
 
     titlekey &= s & gb.NewLine

@@ -1,15 +1,15 @@
 # Gambas Project File 3.0
 Title=titlekeyfix
 Startup=Main
-Version=0.0.1
+Version=1.0.1
 Arguments=[["/mnt/e/title.keys"]]
-CurrentArgument=1
+CurrentArgument=0
 TabSize=2
 Language=en_US
-Maintainer=bisam97
-Address=bisam97@Tobias-PC
+Maintainer=Tobias Hopfgarten
+Address=repro@bisam97.de
 License=General Public License
-PackageName=titlekeyfix-0.0.1
+PackageName=titlekeyfix-1.0.0
 Packager=1
 Systems=ubuntu
 Menus=ubuntu:"Applications/Data Management"
